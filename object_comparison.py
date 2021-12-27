@@ -1,7 +1,9 @@
-#For Practice to show an example of how scope works in Python.
+#For Practice to show an example of how object comparison works in Python.
 
-foo = 'apples'
-bar = 'worms'
+#change the value of foo and bar to see how each comparison answer changes.
+foo = 'cat'
+bar = 'dog'
+
 
 def compare_object_values(foo, bar):
     print('Do foo and bar have the same value?\t', foo==bar)
