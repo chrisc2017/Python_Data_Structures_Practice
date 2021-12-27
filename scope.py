@@ -4,8 +4,8 @@ foo = 50
 bar = 90
 
 def local_scope_test():
-    foo = 2
-    bar = 7
+    foo = 2 #foo is still locally defined
+    bar = 7 #bar is still locally defined
     
     print("Local Scope Test - defined variables within the function:")
     print('Local  foo = ', foo, '\tLocal  bar = ', bar, '')
@@ -13,13 +13,14 @@ def local_scope_test():
     
 def global_scope_test():
     global foo
-    foo = 80
-    bar = 7
+    foo = 80 #redefining the value of global foo
+    bar = 7 #bar is still locally defined
     
     print("Global Scope Test - referenced global foo and defined bar locally:")
     print('Local  foo = ', foo, '\tLocal  bar = ', bar, '')
     print_global_values()
     
+#Only prints the global variables
 def print_global_values():
     print('Global foo = ', foo, '\tGlobal bar = ', bar, '\n')
     
